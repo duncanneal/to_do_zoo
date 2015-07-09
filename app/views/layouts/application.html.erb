@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../../favicon.ico">
    <title><%= content_for?(:title) ? yield(:title) : "To Do Zoo" %></title>
    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "To Do Zoo" %>">
    <meta name="author" content="Duncan Neal & Derek Dyer">
@@ -9,20 +12,23 @@
    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
    <%= csrf_meta_tags %>
    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
- </head>
+   <link rel="stylesheet" href="cover.css.scss">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+  <%= render 'layouts/messages' %>
+  <%= yield %>
 
 
 
 
-    <div class="footer-bottom">
+
+      <div class="footer-bottom">
         <div class="container">
           <div class="row">
             <p class="pull-left">Copyright © 2015 D Squared, Inc. All rights reserved.</p>
