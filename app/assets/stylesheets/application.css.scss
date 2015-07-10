@@ -133,6 +133,15 @@ body {
   font-weight: bold;
 }
 
+body {
+  height: 100%;
+  background: -webkit-linear-gradient(40deg, #8CC3F2 10%, #7595BF 100%);
+  background:    -moz-linear-gradient(40deg, #8CC3F2 10%, #7595BF 100%);
+  background:     -ms-linear-gradient(40deg, #8CC3F2 10%, #7595BF 100%);
+  background:      -o-linear-gradient(40deg, #8CC3F2 10%, #7595BF 100%);
+  background:         linear-gradient(40deg, #8CC3F2 10%, #7595BF 100%);
+  font-family: 'Lato', sans-serif;
+}
 
 /*
  * Footer
