@@ -13,6 +13,12 @@ class ApplicationController < ActionController::Base
     @resource ||= User.new
   end
 
+  #This was added to overide default routing upon successful login
+  def after_sign_in_path_for(resource)
+  lists_path
+  end
+
+  #Commented this out bc wasn't sure it was having any effect. This was pasted in with top 2 methods when setting up login modal on home page
   #def devise_mapping
    # @devise_mapping ||= Devise.mappings[:user]
   #end
