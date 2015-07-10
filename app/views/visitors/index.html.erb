@@ -1,85 +1,86 @@
 <div class="site-wrapper">
-  <div class="site-wrapper-inner">
-    <div class="cover-container">
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">Cover</h3>
-            <nav>
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-
-    <div class="inner cover">
-      <h1 class="cover-heading">To Do Zoo</h1>
-      <p class="lead">Turn Chores into a game</p>
-      <p class="lead">
-        <a href="#" class="btn btn-lg btn-default" data-toggle="modal" data-target="#signupModal">Sign Up!</a>
-      </p>
-    </div>
-
-    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-          </div>
-
-          <div class="modal-body">
-            <div class="authform">
-              <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
-                <h3>Sign up</h3>
-                <%= devise_error_messages! %>
-                <div class="form-group">
-                  <%= f.label :name %>
-                  <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
-                </div>
-                <div class="form-group">
-                  <%= f.label :email %>
-                  <%= f.email_field :email, class: 'form-control' %>
-                </div>
-                <div class="form-group">
-                  <%= f.label :password %>
-                  <%= f.password_field :password, class: 'form-control' %>
-                </div>
-                <div class="form-group">
-                  <%= f.label :password_confirmation %>
-                  <%= f.password_field :password_confirmation, class: 'form-control' %>
-                </div>
-                 
-              
+    <div class="site-wrapper-inner">
+      <div class="cover-container">
+        <div class="masthead clearfix">
+          <div class="inner">
+            <h3 class="masthead-brand">Logo Here</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><%= link_to 'Home', '/' %></li>
+                  <% if user_signed_in? %>
+                    <li><%= link_to 'Dashboard', lists_path %></li>
+                    <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+                  <% else %>
+                    <li><%= link_to 'Sign In', new_user_session_path %></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Contact</a></li>
+                  <% end %>
+                </ul>
+              </nav>
             </div>
           </div>
 
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <%= f.submit 'Sign up', :class => 'btn btn-primary' %>
-            <% end %>
+      <div class="inner cover">
+        <h1 class="cover-heading">To Do Zoo</h1>
+        <p class="lead">Turn Chores into a game</p>
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-default" data-toggle="modal" data-target="#signupModal">Sign Up!</a>
+        </p>
+      </div>
+
+      <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="myModalLabel">Sign Up For To Do Zoo</h4>
+            </div>
+
+            <div class="modal-body">
+              <div class="authform">
+                <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
+                  <h3>Sign up</h3>
+                  <%= devise_error_messages! %>
+                  <div class="form-group">
+                    <%= f.label :name %>
+                    <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :email %>
+                    <%= f.email_field :email, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :password %>
+                    <%= f.password_field :password, class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= f.label :password_confirmation %>
+                    <%= f.password_field :password_confirmation, class: 'form-control' %>
+                  </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <%= f.submit "Let's Do This!", :class => 'btn btn-primary' %>
+              <% end %>
+            </div>
           </div>
+        </div>
+    </div>
+
+      <div class="mastfoot">
+        <div class="inner">
+          <p>© D Squared Inc.</p>
         </div>
       </div>
     </div>
-
-    <div class="mastfoot">
-      <div class="inner">
-        <p>© D Squared Inc.</p>
-      </div>
-    </div>
   </div>
-</div>
-
-</div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="../../dist/js/bootstrap.min.js"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-
+</div>
