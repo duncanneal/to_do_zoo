@@ -21,48 +21,67 @@
   <h1>What Do You Want To Do?</h1>
 </div>
 
-<div class="row">
-  <div class="col-lg-6 col-md-6">
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Add a Kid</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Kid's Name Here">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-  </div>
-   <div class="col-lg-6 col-md-6">
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Make a List</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter the Name of the List">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-lg-6 col-md-6">
-    <div class="form-group">
-        <label for="disabledSelect">Select The List You Want To Add A To Do Item Too</label>
-        <select id="disabledSelect" class="form-control">
-          <option>Room</option>
-          <option>Living Room</option>
-          <option>Night Time</option>
-        </select>
+
+<div><!-- Starts the Tabs area -->
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Kids</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Lists</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Items</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
+          <form>
+            <div class="form-group form-group-lg">
+              <label for="exampleInputEmail1">Add a Kid</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Kid's Name Here">
+            </div>
+            <button type="submit" class="btn btn-default">Ok Add My Kid</button>
+          </form>
+      </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
+          <form>
+            <div class="form-group form-group-lg">
+              <label for="exampleInputEmail1">Make a List</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter the Name of the List">
+            </div>
+            <button type="submit" class="btn btn-default">Add My List</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">
+      <div class="col-lg-6 col-md-6">
+        <div class="form-group form-group-lg">
+          <label for="disabledSelect">Select The List You Want To Add A To Do Item To</label>
+            <select id="disabledSelect" class="form-control">
+              <option>Room</option>
+              <option>Living Room</option>
+              <option>Night Time</option>
+            </select>
+        </div>
+      </div>
+    <div class="col-lg-6 col-md-6">
+      <form>
+        <div class="form-group form-group-lg">
+          <label for="exampleInputEmail1">Add Items To The List</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter a Task or Chore Here!">
+        </div>
+        <button type="submit" class="btn btn-default">Add This Item To The List</button>
+      </form>
     </div>
   </div>
-  <div class="col-lg-6 col-md-6">
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Add Items To The List</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter a Task or Chore Here!">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-  </div>
-</div>
+</div><!-- Ends the Tabs Area -->
+
 
 <div class="page-header">
         <h1>To Dooz</h1>
