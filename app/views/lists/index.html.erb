@@ -7,29 +7,62 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bootstrap theme</a>
-        </div>
+          <a class="navbar-brand" href="#"><%= "Hi there #{@user} "%></a>
+        </div> 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
+            <li class="active"><a href="#">Kids Place</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+
+<div class="row">
+  <h1>What Do You Want To Do?</h1>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Add a Kid</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter Your Kid's Name Here">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+   <div class="col-lg-6 col-md-6">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Make a List</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter the Name of the List">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6 col-md-6">
+    <div class="form-group">
+        <label for="disabledSelect">Select The List You Want To Add A To Do Item Too</label>
+        <select id="disabledSelect" class="form-control">
+          <option>Room</option>
+          <option>Living Room</option>
+          <option>Night Time</option>
+        </select>
+    </div>
+  </div>
+  <div class="col-lg-6 col-md-6">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Add Items To The List</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter a Task or Chore Here!">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>
 
 <div class="page-header">
         <h1>To Dooz</h1>
