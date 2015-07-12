@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :lists
   resources :items
+  resources :kids
 
 root to: 'visitors#index'
 end

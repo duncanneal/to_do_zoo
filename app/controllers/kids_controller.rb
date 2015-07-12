@@ -1,0 +1,3 @@
+class KidsController < ApplicationController
+  
+end
