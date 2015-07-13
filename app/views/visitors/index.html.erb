@@ -1,72 +1,99 @@
-<div class="site-wrapper">
-    <div class="site-wrapper-inner">
-      <div class="cover-container">
-        <div class="masthead clearfix">
-          <div class="inner">
-            <h3 class="masthead-brand">Logo Here</h3>
-              <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><%= link_to 'Home', '/' %></li>
-                  <% if user_signed_in? %>
-                    <li><%= link_to 'Dashboard', lists_path %></li>
-                    <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
-                  <% else %>
-                    <li><%= link_to 'Sign In', new_user_session_path %></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Contact</a></li>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../favicon.ico">
+  <title><%= content_for?(:title) ? yield(:title) : "To Do Zoo" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "To Do Zoo" %>">
+  <meta name="author" content="Duncan Neal &amp; Derek Dyer">
+  <%= stylesheet_link_tag 'cover', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body>
+      <%= render 'layouts/messages' %>
+      <video autoplay  poster="https://s3.amazonaws.com/todozooresources/HomePage/Playground.png" id="bgvid" loop>
+        <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+        <!-- <source src="//demosthenes.info/assets/videos/polina.webm" type="video/webm"> -->
+        <source src="https://s3.amazonaws.com/todozooresources/HomePage/ToDoZoo.mp4" type="video/mp4">
+        </video>
+        <div class="site-wrapper">
+          <div class="site-wrapper-inner">
+            <div class="cover-container">
+              <div class="masthead clearfix">
+                <div class="inner">
+                  <div class="masthead-brand"><%= image_tag "Logo-Horizontal.png" %></div>
+                  <nav>
+                    <ul class="nav masthead-nav">
+                      <li class="active"><%= link_to 'Home', '/' %></li>
+                      <% if user_signed_in? %>
+                      <li><%= link_to 'Dashboard', lists_path %></li>
+                      <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+                      <% else %>
+                      <li><%= link_to 'Sign In', new_user_session_path %></li>
+                      <li><a href="#">Contact</a></li>
+                      <% end %>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="row_cover">
+                <div class="col-lg-6 col-md-6">
+                  <div class="inner cover">
+                   <h3>Here at To Do Zoo, we remember what it was like to see a drty room and be super overwhelmed. To Do Zoo breaks "big projects" down into small to do lists and incetivises with fun screen time. Our hope is that kids learn how to turn a large project into a series of easily done tasks.</h3>
+                 </div>
+               </div>
+
+               <div class="col-lg-6 col-md-6">
+                <div class="todo_authform">
+                  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
+                  <h3>Sign up!</h3>
+                  <%= devise_error_messages! %>
+                  <div class="form-group form-group-lg">
+                    <%= f.label :name %>
+                    <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
+                  </div>
+                  <div class="form-group form-group-lg">
+                    <%= f.label :email %>
+                    <%= f.email_field :email, class: 'form-control' %>
+                  </div>
+                  <div class="form-group form-group-lg">
+                    <%= f.label :password %>
+                    <%= f.password_field :password, class: 'form-control' %>
+                  </div>
+                  <div class="form-group form-group-lg">
+                    <%= f.label :password_confirmation %>
+                    <%= f.password_field :password_confirmation, class: 'form-control' %>
+                  </div>
+                  <%= f.submit "Let's Do This!", :class => 'btn btn-primary' %>
                   <% end %>
-                </ul>
-              </nav>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6 col-md-6">
-              <div class="inner cover">
-               <div id="logo"> <%= image_tag "logo.png" %></div>
-               <p class="lead">Turn Chores into a game!</p>
-             </div>
-           </div>
-
-           <div class="col-lg-6 col-md-6">
-            <div class="todo_authform">
-              <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
-              <h3>Sign up!</h3>
-              <%= devise_error_messages! %>
-              <div class="form-group">
-                <%= f.label :name %>
-                <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :email %>
-                <%= f.email_field :email, class: 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :password %>
-                <%= f.password_field :password, class: 'form-control' %>
-              </div>
-              <div class="form-group">
-                <%= f.label :password_confirmation %>
-                <%= f.password_field :password_confirmation, class: 'form-control' %>
-              </div>
-              <%= f.submit "Let's Do This!", :class => 'btn btn-primary' %>
-              <% end %>
+            <div class="mastfoot">
+              <p class="pull-left">Copyright © 2015 D Squared, Inc. All rights reserved.</p>
+              <p class="pull-right">Designed by <span><a target="_blank" href="http://www.theironyard.com">Duncan Neal & Derek Dyer</a></span></p>
             </div>
+            <!--/Footer-->
           </div>
         </div>
-
-      <div class="mastfoot">
-        <div class="inner">
-          <p>© D Squared Inc.</p>
-        </div>
-      </div>
-    </div>
-  </div>
       <!-- Bootstrap core JavaScript
       ================================================== -->
       <!-- Placed at the end of the document so the pages load faster -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script src="../../dist/js/bootstrap.min.js"></script>
       <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-</div>
+      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    </div>
+  </body>
+  </html>

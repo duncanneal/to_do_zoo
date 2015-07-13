@@ -11,12 +11,11 @@
  * file per style scope.
  *
  *= require '_framework_and_overrides'
- *= require '_dashboard'
  *= require_self
  */
 
 
-// TAKE OUT COVER STYLES FROM HERE, just have all the other stuff
+// TAKE OUT DASHBOARD STYLES FROM HERE, just have cover stuff
 
 /*
  * Globals
@@ -27,6 +26,27 @@ a,
 a:focus,
 a:hover {
   color: #fff;
+}
+
+// Video Background
+video { 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('https://s3.amazonaws.com/todozooresources/HomePage/Playground.png') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+// This styles the stuff in the center of the home page
+.row_cover {
+ 
 }
 
 /* Custom default button */
@@ -42,11 +62,11 @@ a:hover {
 
 /* Field changes by Derek 7/11 */
 .form-group-lg .form-control {
-  height: 70px;
-  padding: 10px 16px;
-  font-size: 35px;
+  height: 55px;
+  padding: 2px 3px;
+  font-size: 28px;
   line-height: 1.3333333;
-  border-radius: 17px;
+  border-radius: 5px;
 }
 
 /* This was added to make space on the kids place page*/
@@ -62,9 +82,24 @@ a:hover {
 
 /* Custom authform */
 .todo_authform {
-  padding-top: 30px;
-  max-width: 320px;
+  //padding-top: 30px;
+  max-width: 400px;
   margin: 0 auto;
+}
+
+// Changes color of input fields
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: rgba(229, 103, 23, 0.8);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+    outline: 0 none;
+}
+
+// makes button 100% wide
+input[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  font-size: 30px;
+  margin-top: 6px;
 }
 
 /*
@@ -74,16 +109,13 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #fff;
   /*padding-top: 40px;*/
 }
-
 body {
-  //color: #fff;
+  color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
-
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -141,7 +173,7 @@ body {
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
-  color: #fff;
+  color: #f2623e;
   border-bottom-color: #fff;
 }
 
@@ -160,8 +192,11 @@ body {
  */
 
 .cover {
+  text-align: left;
   padding: 0 20px;
+  padding-top: 8em;
 }
+
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
@@ -207,6 +242,6 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 700px;
+    width: 900px;
   }
 }
