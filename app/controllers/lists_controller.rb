@@ -1,7 +1,20 @@
 class ListsController < ApplicationController
   before_filter :authenticate_user!
+  
   def index
-    @user = current_user.name
+    
+  end
+
+  def list
+    
+  end
+
+  def item
+    
+  end
+
+  def progress
+    
   end
 
   private
