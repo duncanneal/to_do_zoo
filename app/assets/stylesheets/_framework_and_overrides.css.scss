@@ -85,12 +85,12 @@ section {
 .btn-primary,
  {
    border-top: 1px solid #bddef2;
-   background: #021859;
-   background: -webkit-gradient(linear, left top, left bottom, from(#396fed), to(#021859));
-   background: -webkit-linear-gradient(top, #396fed, #021859);
-   background: -moz-linear-gradient(top, #396fed, #021859);
-   background: -ms-linear-gradient(top, #396fed, #021859);
-   background: -o-linear-gradient(top, #396fed, #021859);
+   background: #23648C;
+   background: -webkit-gradient(linear, left top, left bottom, from(#023059), to(#7EBCF2));
+   background: -webkit-linear-gradient(top, #023059, #7EBCF2);
+   background: -moz-linear-gradient(top, #023059, #7EBCF2);
+   background: -ms-linear-gradient(top, #023059, #7EBCF2);
+   background: -o-linear-gradient(top, #023059, #7EBCF2);
    padding: 5px 10px;
    -webkit-border-radius: 8px;
    -moz-border-radius: 8px;
@@ -102,7 +102,7 @@ section {
    color: #ffffff;
    font-size: 14px;
    font-family: Tekton Pro;
-   text-decoration: bold;
+   text-decoration: none;
    vertical-align: middle;
    }
 
@@ -114,7 +114,7 @@ section {
    }
 
 .button:active {
-  border-top-color: #1b435e;
+  border-top-color: #7EC2D9;
   text-decoration: bold;
   background: #1b435e;
   opacity: 0.4;

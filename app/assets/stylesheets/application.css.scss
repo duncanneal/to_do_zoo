@@ -27,7 +27,14 @@ a,
 a:focus,
 a:hover {
   color: #fff;
+  font-family: "Marker Felt";
+  font-size: 14pt;
 }
+
+.navbar-brand {
+  font-family: "Marker Felt";
+  font-size: 16pt;
+  }
 
 /* Custom default button */
 .btn-default,
@@ -109,7 +116,6 @@ h1 {
 .inner {
   padding: 30px;
 }
-
 
 /*
  * Header
