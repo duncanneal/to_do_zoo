@@ -6,7 +6,7 @@ class ListsController < ApplicationController
   end
 
   def list
-    
+
   end
 
   def item
@@ -17,10 +17,5 @@ class ListsController < ApplicationController
     
   end
 
-  private
-
-  def link_params
-    params.require(:lists).permit(:name, :user_id)
-  end
 
 end
