@@ -1,19 +1,20 @@
 class KidsController < ApplicationController
   
   def index
-
+    @kids = Kid.all
   end
 
   def new
+    @kids = Kid.all
     @kid = Kid.new
   end
 
   def create
-    @kid = Kid.new(list_params)
+    @kid = Kid.new(kid_params)
 
     respond_to do |format|
       if @kid.save
-        format.html { redirect_to root_path, notice: 'Your Bundle of joy was added successfully' }
+        format.html { redirect_to new_kid_path, notice: 'Your Bundle of joy was added successfully' }
       else
         format.html { render :new }
       end
@@ -23,7 +24,7 @@ class KidsController < ApplicationController
   private
 
   def list_params
-    params.require(:kid)
+    params.require(:kid).permit(:name)
   end
 
 end
