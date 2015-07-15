@@ -35,26 +35,13 @@
       <h1 class="page-header">Kids</h1>
 
       <div class="row placeholders">
+         <% @kids.each do |kid| %>
         <div class="col-xs-6 col-sm-3 placeholder">
           <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Kid's picture">
-          <h4>A Kid's Name</h4>
+          <h4><%= kid.name %></h4>
           <span class="text-muted">Something else</span>
         </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-          <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-          <h4>A Kid's Name</h4>
-          <span class="text-muted">Something else</span>
-        </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-          <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-          <h4>A Kid's Name</h4>
-          <span class="text-muted">Something else</span>
-        </div>
-        <div class="col-xs-6 col-sm-3 placeholder">
-          <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-          <h4>A Kid's Name</h4>
-          <span class="text-muted">Something else</span>
-        </div>
+        <% end %>
       </div>
 
       <!-- Button trigger modal -->
@@ -110,27 +97,6 @@
           <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
-    </div>
-
-    <div class="table-responsive">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Kids Name</th>
-            <th>Lists</th>
-            <th>Items</th>
-            <th>Completion Amount</th>
-            <th>Header</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @kids.each do |kid| %>
-          <tr>
-            <td><%= kid.name %></td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
     </div>
   </div>
 </div>
