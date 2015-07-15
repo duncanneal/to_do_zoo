@@ -21,18 +21,20 @@
 /*
  * Globals
  */
+ $dark: #1F7972;
+ $white_opaque: rgba(250, 250, 250, .3);
 
 /* Links */
 a,
 a:focus,
 a:hover {
   color: #fff;
-  font-family: "Marker Felt";
+  font-family: "Marker Felt", Tahoma, Sans-serif;
   font-size: 14pt;
 }
 
 .navbar-brand {
-  font-family: "Marker Felt";
+  font-family: "Marker Felt", Tahoma, Sans-serif;
   font-size: 16pt;
   }
 
@@ -54,6 +56,7 @@ a:hover {
   font-size: 35px;
   line-height: 1.3333333;
   border-radius: 17px;
+  font-family: "Marker Felt", Tahoma, Sans-serif;
 }
 
 /* This was added to make space on the kids place page*/
@@ -90,8 +93,9 @@ body {
   // text-align: center;
 }
 
-h1 {
+h1,h3 {
   text-align: center;
+  font-family: "Myriad Pro", Tahoma, Sans-serif;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */

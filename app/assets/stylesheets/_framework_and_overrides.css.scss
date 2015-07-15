@@ -110,6 +110,7 @@ section {
   border-top-color: #0c507d;
   background: #0c507d;
   color: #fcfcfc;
+  transition: all .4s ease-in-out;
   opacity: 0.4;
    }
 
@@ -117,5 +118,17 @@ section {
   border-top-color: #7EC2D9;
   text-decoration: bold;
   background: #1b435e;
+  transition: all .4s ease-in-out;
   opacity: 0.4;
-  }   
+  } 
+
+  ::-webkit-input-placeholder {
+ font-size: 14px;
+ display: inline-block;
+ text-align: left;
+ padding: 1em 2em;
+ color: #d0cdfa;
+ font: "Market Felt";
+ transition: all .4s ease-in-out;
+ opacity: 0.4;
+}  
