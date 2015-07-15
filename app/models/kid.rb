@@ -1,3 +1,3 @@
-class List < ActiveRecord::Base
+class Kid < ActiveRecord::Base
   belongs_to :user
 end
