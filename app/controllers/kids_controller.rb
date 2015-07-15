@@ -23,7 +23,7 @@ class KidsController < ApplicationController
 
   private
 
-  def list_params
+  def kid_params
     params.require(:kid).permit(:name)
   end
 
