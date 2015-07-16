@@ -101,8 +101,8 @@
           <tbody>
             <% @items.each do |item| %>
           <tr>
-            <td>kid's name</td>
-            <td>list name</td>
+            <td><%= item.list.kid.name %></td>
+            <td><%= item.list.name %></td>
             <td><%= item.task %></td>
           </tr>
           <% end %>
