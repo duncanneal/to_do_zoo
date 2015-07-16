@@ -21,7 +21,7 @@
 /*
  * Globals
  */
- $dark: #1F7972;
+
  $white_opaque: rgba(250, 250, 250, .3);
 
 /* Links */
@@ -49,7 +49,7 @@ a:hover {
 }
 
 
-/* Field changes by Derek 7/11 */
+/* Field changes*/
 .form-group-lg .form-control {
   height: 70px;
   padding: 10px 16px;
@@ -93,7 +93,7 @@ body {
   // text-align: center;
 }
 
-h1,h3 {
+h1,h3, h4 {
   text-align: center;
   font-family: "Myriad Pro", Tahoma, Sans-serif;
 }
