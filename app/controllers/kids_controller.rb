@@ -6,11 +6,11 @@ class KidsController < ApplicationController
 
   def new
     @kids = Kid.all
-    @kid  = Kid.new
+    @kid = Kid.new
   end
 
   def create
-    @kid  = Kid.new(kid_params)
+    @kid = Kid.new(kid_params)
 
     respond_to do |format|
       if @kid.save
