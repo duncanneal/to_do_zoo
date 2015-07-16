@@ -34,61 +34,68 @@
       <h1 class="page-header">Kids</h1>
 
       <div class="row placeholders">
-         <% @kids.each do |kid| %>
-        <div class="col-xs-6 col-sm-3 placeholder">
-          <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Kid's picture">
-          <h4><%= kid.name %></h4>
-          <span class="text-muted">Something else</span>
-        </div>
-        <% end %>
+       <% @kids.each do |kid| %>
+       <div class="col-xs-6 col-sm-3 placeholder">
+        <%= image_tag kid.kidimg %>
+        <h4><%= kid.name %></h4>
+        <span class="text-muted">Something else</span>
       </div>
+      <% end %>
+    </div>
 
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add a Kid</button>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add a Kid</button>
 
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Fill Out This Form to Add a Kid</h4>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Fill Out This Form to Add a Kid</h4>
+          </div>
+          <div class="modal-body">
+            <%= form_for(@kid) do |f| %>
+            <% if @kid.errors.any? %>
+            <div id="error_explanation">
+              <h2><%= pluralize(@kid.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+              <ul>
+                <% @kid.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+              </ul>
             </div>
-            <div class="modal-body">
-              <%= form_for(@kid) do |f| %>
-              <% if @kid.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(@kid.errors.count, "error") %> prohibited this post from being saved:</h2>
+            <% end %>
 
-                <ul>
-                  <% @kid.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                  <% end %>
-                </ul>
+            <form>
+              <div class="row">
+                <div class="large-12 columns">
+                  <%= f.label :kid %>
+                  <%= f.text_field :name %>
+                </div>
               </div>
-              <% end %>
 
-              <form>
-                <div class="row">
-                  <div class="large-12 columns">
-                    <%= f.label :kid %>
-                    <%= f.text_field :name %>
+              <div class="row">
+                <div class="large-12 columns">
+                  <%= f.label :kidimg %>
+                  <%= f.file_field :kidimg  %>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="large-12 columns">
+                  <div class="actions">
+                    <%= f.submit class: 'button tiny' %>
                   </div>
                 </div>
-
-                <div class="row">
-                  <div class="large-12 columns">
-                    <div class="actions">
-                      <%= f.submit class: 'button tiny' %>
-                    </div>
-                  </div>
-                </div>
+              </div>
             </form>
             <% end %>
           </div>
 
           <div class="modal-footer">
-            
+
           </div>
         </div>
         <div class="modal-footer">

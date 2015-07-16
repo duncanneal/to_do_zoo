@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem "cancan"
 
 gem 'carrierwave'
+gem 'fog'
 gem "mini_magick"
 
 group :development, :test do
