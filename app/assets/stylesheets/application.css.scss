@@ -77,6 +77,22 @@ a:hover {
   margin: 0 auto;
 }
 
+/* Modal Styles */
+.modal .modal-dialog .modal-header {
+  background-color: #db9e36;
+  .modal-title {
+    font-family: "Marker Felt", Tahoma, sans-serif;
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+  }
+}
+.modal-footer {
+  text-align: right;
+  padding-top: 0;
+  }
+
+
 /*
  * Base structure
  */
@@ -93,7 +109,7 @@ body {
   // text-align: center;
 }
 
-h1, h3, h4 {
+h1, h3, {
   text-align: center;
   font-family: "Tahoma", Helvetica, Sans-serif;
 }
@@ -170,7 +186,6 @@ h1, h3, h4 {
 /*
  * Cover
  */
-
 .cover {
   padding: 0 20px;
 }
@@ -211,7 +226,7 @@ h1, h3, h4 {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 200%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
 
@@ -223,8 +238,7 @@ h1, h3, h4 {
   }
 }
 
-/*Buttons*/
-.modal
+/*Buttons
 .btn-default, .btn-default:hover, .btn-default:focus {
   box-sizing: border-box;
   margin-top: 28px;
@@ -238,9 +252,9 @@ h1, h3, h4 {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
+}*/
 
-.btn-primary,{
+.btn-primary, .btn-default {
   box-sizing: border-box;
   margin-top: 28px;
   padding: 15px 0;

@@ -91,16 +91,29 @@ ul {
  */
 
 .main {
-  padding: 20px;
+  padding: 030px;
 }
 @media (min-width: 768px) {
   .main {
-    padding-right: 40px;
-    padding-left: 40px;
-  }
+    height: 100%;
+    background: -webkit-linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
+    background:    -moz-linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
+    background:     -ms-linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
+    background:      -o-linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
+    background:         linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
+    font-family: 'Tahoma', sans-serif;
 }
+  }
+
 .main .page-header {
-  margin-top: 0;
+  margin-top: 1px;
+  color: #fff;
+  font-family: "Tekton pro", sans-serif;
+  text-decoration: bold;
+  text-align: center;
+  -webkit-box-shadow: 0 0 10px 3px rgba(0,0,0,.3);
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 td {
