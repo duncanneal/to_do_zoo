@@ -1,0 +1,43 @@
+// import the CSS framework
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: #8ac99a;
+}
+
+.logo {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 35px;
+}
+
+.nav {
+  padding-left: 30px;
+  position: relative;
+  display: inline-block;
+  top: 15px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+  display: inline;
+  margin-left: 25px;
+}
+
+.header-row {
+  background-color: #74b8e2;
+  box-shadow: 2px 2px 12px 1px black;
+  padding-bottom: 10px;
+}
+
+.row {
+  margin-left: 10px;
+  margin-right: 10px;
+}
