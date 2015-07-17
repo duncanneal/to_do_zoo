@@ -1,3 +1,12 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <script src="//use.typekit.net/mjm7sjv.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../favicon.ico">
+</head>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -14,9 +23,6 @@
         <li><a href="#">Settings</a></li>
         <li><%= link_to "Kid's Place", kids_path %></li>
       </ul>
-      <form class="navbar-form navbar-right">
-        
-      </form>
     </div>
   </div>
 </nav>
@@ -41,7 +47,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Fill Out This Form to Add a List</h4>
+              <h4 class="modal-title" id="myModalLabel">Add a List</h4>
             </div>
             <div class="modal-body">
               <%= form_for(@list) do |f| %>
@@ -70,21 +76,16 @@
                 <div class="row">
                   <div class="large-12 columns">
                     <div class="actions">
-                      <%= f.submit class: 'button tiny' %>
+                      <%= f.submit class: 'button btn-default' %>
                     </div>
                   </div>
                 </div>
               </form>
               <% end %>
             </div>
-
-            <div class="modal-footer">
-
-            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>

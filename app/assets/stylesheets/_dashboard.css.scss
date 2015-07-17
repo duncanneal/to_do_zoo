@@ -71,15 +71,17 @@ ul {
   padding-right: 20px;
   padding-left: 20px;
   color: #333;
-  font-family: "GillSans-UltraBold", Helvetica, Arial, sans-serif;
+  font-family: "blambot-pro",sans-serif;
+  text-decoration: bold;
   font-size: 25pt;
   color: #bddbf4;
   text-decoration: none;
 }
 .nav-sidebar > .active > a,
-.nav-sidebar > .active > a:hover,
-  {opacity: 0.4;
+.nav-sidebar > .active > a:hover,{
+  opacity: 0.4;
 }
+
 .nav-sidebar > .active > a:focus {
   color: #fff;
   background-color: #428bca;
@@ -96,24 +98,21 @@ ul {
 @media (min-width: 768px) {
   .main {
     height: 100%;
-    background: -webkit-linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
-    background:    -moz-linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
-    background:     -ms-linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
-    background:      -o-linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
-    background:         linear-gradient(60deg, #8ac99a 10%, #fffad5 100%);
-    font-family: 'Gillsans-Bold', sans-serif;
+    font-family: "blambot-pro",sans-serif;
+    text-decoration: bold;
 }
   }
 
 .main .page-header {
-  margin-top: 1px;
+  margin-top: 20px;
+  width: 100%;
+  background-color: #7595bf;
   color: #fff;
-  font-family: 'Gillsans-Bold', sans-serif;
+  font-family: "blambot-pro",sans-serif;
   text-decoration: bold;
   text-align: center;
-  -webkit-box-shadow: 0 0 10px 3px rgba(0,0,0,.3);
   padding-top: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 td {

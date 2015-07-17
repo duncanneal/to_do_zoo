@@ -29,12 +29,11 @@ a,
 a:focus,
 a:hover {
   color: #fff;
-  font-family: "GillSans-UltraBold", Helvetica, Arial, sans-serif;
-  font-size: 20pt;
+  font-family: "blambot-pro",sans-serif;
 }
 
 .navbar-brand {
-  font-family: "GillSans-UltraBold", Helvetica, Arial, sans-serif;
+  font-family:  "blambot-pro",sans-serif;
   font-size: 28pt;
   }
 
@@ -63,7 +62,7 @@ a:hover {
   font-size: 35px;
   line-height: 1.3333333;
   border-radius: 17px;
-  font-family: "GillSans-Bold", Helvetica, Arial, sans-serif;
+  font-family:  "blambot-pro",sans-serif;
 }
 
 /* This was added to make space on the kids place page*/
@@ -88,16 +87,35 @@ a:hover {
 .modal .modal-dialog .modal-header {
   background-color: #db9e36;
   .modal-title {
-    font: "GillSans-UltraBold", Helvetica, Arial, sans-serif;
+    font:  "blambot-pro",sans-serif;
+    text-decoration: bold;
     color: #fff;
     font-size: 36px;
     text-align: center;
   }
 }
-.modal-footer {
-  text-align: right;
-  padding-top: 0;
+  .modal-footer {
+    text-align: right;
+    background-color: #db9e36;
+    padding-top: 0;
+    border-top:0;
+      input.btn-default, button.btn.btn-default {
+        box-sizing: border-box;
+        margin-top: 20px;
+        padding: 15px 15px;
+        text-align: center;
+        font: 24px/24px  "blambot-pro",sans-serif;
+        text-decoration: bold;
+        color: #fddea5;
+        background: #bf4b32;
+        border: solid 1.5px #f2633f;
+        border-radius: 10px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
   }
+        }
+
 
 
 /*
@@ -108,17 +126,21 @@ html,
 body {
   height: 100%;
   background-color: #fff;
+  font-family: inherit;
   /*padding-top: 40px;*/
 }
 
 body {
   //color: #fff;
-  // text-align: center;
+   text-align: center;
+   font-family: inherit;
+  
 }
 
-h1, h3, {
+h1, {
   text-align: center;
-  font-family: "Gill Sans", Helvetica, Arial, sans-serif;
+  font-family: "blambot-pro",sans-serif;
+  font-size: 48px;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -245,28 +267,15 @@ h1, h3, {
   }
 }
 
-/*Buttons
-.btn-default, .btn-default:hover, .btn-default:focus {
-  box-sizing: border-box;
-  margin-top: 28px;
-  padding: 15px 0;
-  text-align: center;
-  font: 24px/24px "Marker Felt", Helvetica, Arial, sans-serif;
-  color: #74b8e2;
-  background: #206a99;
-  border: solid 1px #206a99;
-  border-radius: 10px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}*/
+/*Buttons*/
 
-.btn-primary, .btn-default {
+.btn-primary,  {
   box-sizing: border-box;
   margin-top: 28px;
-  padding: 15px 0;
+  padding:  15px 15px 15px 15px;
   text-align: center;
-  font: 24px/24px "GillSans-UltraBold", Helvetica, Arial, sans-serif;
+  font: 24px/24px "blambot-pro",sans-serif;
+  text-decoration: bold;
   color: #74b8e2;
   background: #206a99;
   border: solid 1.5px #206a99;
@@ -275,5 +284,3 @@ h1, h3, {
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-  
-
