@@ -1,10 +1,10 @@
 class KidsController < ApplicationController
   
   def index
-    render :layout => false
-    
     @kids = Kid.all
     @lists = List.all
+
+    render :layout => false
   end
 
   def new

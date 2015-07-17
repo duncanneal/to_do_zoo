@@ -1,119 +1,77 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <script src="//use.typekit.net/mjm7sjv.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="../../favicon.ico">
-</head>
+<h1 class="page-header">Lists</h1>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">To Do Zoo</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Settings</a></li>
-        <li><%= link_to "Kid's Place", kids_path %></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <%= form_for(@list) do |f| %>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add a List</h4>
+      </div>
+      <div class="modal-body">
+        <% if @list.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@kid.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-3 col-md-2 sidebar">
-      <ul class="nav nav-sidebar">
-        <li><%= link_to 'My Kids', new_kid_path %></li>
-        <li class="active"><%= link_to 'Lists', lists_path %><span class="sr-only">(current)</span></li>
-        <li><%= link_to 'Items', items_path %></li>
-      </ul>
-    </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <h1 class="page-header">Lists</h1>
+          <ul>
+            <% @list.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
 
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add a List</button>
-
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Add a List</h4>
-            </div>
-            <div class="modal-body">
-              <%= form_for(@list) do |f| %>
-              <% if @list.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(@kid.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-                <ul>
-                  <% @list.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                  <% end %>
-                </ul>
-              </div>
-              <% end %>
-
-              <form>
-                <div class="row">
-                  <div class="large-12 columns">
-                    <%= f.label :kid %>
-                    <%= f.collection_select(:kid_id, Kid.all, :id, :name) %>
-                    <%= f.label :list %>
-                    <%= f.text_field :name %>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="large-12 columns">
-                    <div class="actions">
-                      <%= f.submit class: 'button btn-default' %>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <% end %>
-            </div>
+        <div class="row">
+          <div class="large-12 columns">
+            <%= f.label :kid %>
+            <%= f.collection_select(:kid_id, Kid.all, :id, :name) %>
+            <%= f.label :list %>
+            <%= f.text_field :name %>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="actions">
+              <%= f.submit class: 'button btn-default' %>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>List Name</th>
-              <th>Kids Name</th>
-              <th>Progress</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @lists.each do |list| %>
-          <tr>
-            <td><%= list.name %></td>
-            <td><%= list.kid.name %></td>
-            <td><div class="progress">
-                  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                  <span class="sr-only">70% Complete</span>
-                </div>
-              </div></td>
-          </tr>
-          <% end %>
-          </tbody>
-        </table>
-      </div>
     </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <%= f.submit class: 'btn btn-default' %>
+    </div>
+    <% end %> 
   </div>
 </div>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>List Name</th>
+        <th>Kids Name</th>
+        <th>Progress</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @lists.each do |list| %>
+        <tr>
+          <td><%= list.name %></td>
+          <td><%= list.kid.name %></td>
+          <td><div class="progress">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                <span class="sr-only">70% Complete</span>
+              </div>
+            </div></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add a List</button>
+

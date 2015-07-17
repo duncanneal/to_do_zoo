@@ -4,7 +4,11 @@ Rails.application.routes.draw do
 
   get 'lists/progress', :to => 'lists#progress'
 
-  resources :kids, :lists, :items
-
-root to: 'visitors#index'
+  resources :kids
+  
+  resources :lists do
+    resources :items
+  end
+  
+  root to: 'visitors#index'
 end

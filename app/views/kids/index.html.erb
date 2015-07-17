@@ -15,57 +15,48 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-      <![endif]-->
-    </head>
-    <body>
-      <div class="header-row">
-        <div class="col-lg-3">
-          <div class="user">
-            <div class="icon">
-              <%= image_tag "mia_circle.png" %>
-            </div>
-          </div>
-        </div>
-        <div class="nav">
-          <ul>
-            <li><i class="fa fa-bomb fa-5x"></i></li>
-            <li><i class="fa fa-leaf fa-5x"></i></li>
-          </ul>
-        </div>
-        <%= render 'layouts/messages' %>
-      </div>
-
-      <div class="main-container">
-        <div class="row">
-          <h1 class="page-heading">Kid's Name Chores</h1>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-3 col-md-3">
-            <%= image_tag "chores.png" %>
-          </div>
-          <div class="col-lg-9 col-md-9 chores-description-container">
-            <p>Thundercats meditation four loko, biodiesel Schlitz roof party pickled fap mixtape American Apparel literally put a bird on it salvia. Typewriter fingerstache leggings distillery, umami paleo kogi jean shorts dreamcatcher tilde Marfa kale chips deep v. Four loko Neutra bitters Intelligentsia 8-bit sartorial mumblecore. Heirloom fanny pack deep v small batch Thundercats, 3 wolf moon four dollar toast sriracha PBR church-key. Four dollar toast cardigan Wes Anderson plaid asymmetrical, deep v vinyl photo booth fixie lo-fi freegan. YOLO tousled heirloom cred, art party disrupt Pitchfork pop-up you probably haven't heard of them. Vegan seitan photo booth before they sold out retro, leggings roof party Pitchfork Etsy pop-up +1 listicle banh mi iPhone ethical.</p>
-          </div>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head> 
+<body class="kids-place">
+  <div class="header-row">
+    <div class="col-lg-3">
+      <div class="user">
+        <div class="icon">
+          <%= image_tag "mia_circle.png" %>
         </div>
       </div>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><i class="fa fa-bomb fa-5x"></i></li>
+        <li><i class="fa fa-leaf fa-5x"></i></li>
+      </ul>
+    </div>
+    <%= render 'layouts/messages' %>
+  </div>
 
-      <footer class="footer">
-        <div class="container">
-          <p>Stuff here</p>
-        </div>
-      </footer>
+  <div class="main-container">
+    <div class="row">
+      <h1 class="page-heading">Kid's Name Chores</h1>
+    </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <div class="row">
+      <div class="col-lg-3 col-md-3">
+        <%= image_tag "chores.png" %>
+      </div>
+      <div class="col-lg-9 col-md-9 chores-description-container">
+        <p>Thundercats meditation four loko, biodiesel Schlitz roof party pickled fap mixtape American Apparel literally put a bird on it salvia. Typewriter fingerstache leggings distillery, umami paleo kogi jean shorts dreamcatcher tilde Marfa kale chips deep v. Four loko Neutra bitters Intelligentsia 8-bit sartorial mumblecore. Heirloom fanny pack deep v small batch Thundercats, 3 wolf moon four dollar toast sriracha PBR church-key. Four dollar toast cardigan Wes Anderson plaid asymmetrical, deep v vinyl photo booth fixie lo-fi freegan. YOLO tousled heirloom cred, art party disrupt Pitchfork pop-up you probably haven't heard of them. Vegan seitan photo booth before they sold out retro, leggings roof party Pitchfork Etsy pop-up +1 listicle banh mi iPhone ethical.</p>
+      </div>
+    </div>
+  </div>
 
-  </body>
-  </html>
+  <footer class="footer">
+    <div class="container">
+      <p>Stuff here</p>
+    </div>
+  </footer>
+</body>
+</html>
