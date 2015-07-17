@@ -110,7 +110,14 @@ a:hover {
     background-color: #db9e36;
     padding-top: 0;
     border-top:0;
+
       input.btn-default, button.btn.btn-default {
+        background: #bf4b32;
+        border: solid 1.5px #f2633f;
+      }
+
+      input.btn-default, button.btn.btn-default,
+      input.btn-primary, button.btn.btn-primary {
         box-sizing: border-box;
         margin-top: 20px;
         padding: 15px 15px;
@@ -118,8 +125,6 @@ a:hover {
         font: 24px/24px  "blambot-pro",sans-serif;
         text-decoration: bold;
         color: #fddea5;
-        background: #bf4b32;
-        border: solid 1.5px #f2633f;
         border-radius: 10px;
         -webkit-transition: all 0.3s ease-in-out;
         -moz-transition: all 0.3s ease-in-out;
@@ -286,18 +291,7 @@ h1, {
 
 /*Buttons*/
 
-.btn-primary,  {
-  box-sizing: border-box;
-  margin-top: 28px;
-  padding:  15px 15px 15px 15px;
-  text-align: center;
-  font: 24px/24px "blambot-pro",sans-serif;
-  text-decoration: bold;
+.btn-primary  {
   color: #74b8e2;
   background: #206a99;
-  border: solid 1.5px #206a99;
-  border-radius: 10px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }

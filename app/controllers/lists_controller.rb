@@ -2,8 +2,8 @@ class ListsController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @lists = List.all
-    @list = List.new
+    @lists = current_user.lists.all
+    @list = current_user.lists.new
   end
 
   def progress
@@ -15,7 +15,7 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(list_params)
+    @list = current_user.lists.new(list_params)
 
     respond_to do |format|
       if @list.save
@@ -31,5 +31,4 @@ class ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:name, :kid_id)
   end
-
 end

@@ -1,114 +1,59 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">To Do Zoo</a>
-    </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Settings</a></li>
-        <li><%= link_to "Kid's Place", kids_path %></li>
-      </ul>
-      <form class="navbar-form navbar-right">
-     
-      </form>
-    </div>
-  </div>
-</nav>
+<h1 class="page-header"><%= @list.name %> for <%= @list.kid.name %></h1>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-3 col-md-2 sidebar">
-      <ul class="nav nav-sidebar">
-        <li><%= link_to 'My Kids', lists_path %></li>
-        <li><%= link_to 'Lists', lists_path %></li>
-        <li class="active"><%= link_to 'Items', items_path %><span class="sr-only">(current)</span></li>
-      </ul>
-    </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <h1 class="page-header">Items</h1>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <%= form_for([@list, @item]) do |f| %>
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Fill Out This Form to Add a Item to a List</h4>
+      </div>
+      <div class="modal-body">
+        <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this post from being saved:</h2>
+          <ul>
+            <% @item.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
 
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add an Item</button>
-
-      <!-- Modal -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title" id="myModalLabel">Fill Out This Form to Add a Item to a List</h4>
-            </div>
-            <div class="modal-body">
-              <%= form_for(@item) do |f| %>
-              <% if @item.errors.any? %>
-              <div id="error_explanation">
-                <h2><%= pluralize(@item.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-                <ul>
-                  <% @item.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                  <% end %>
-                </ul>
-              </div>
-              <% end %>
-
-              <form>
-                <div class="row">
-                  <div class="large-12 columns">
-                    <%= f.label :list %>
-                    <%= f.collection_select(:list_id, List.all, :id, :name) %>
-                    <%= f.label :item %>
-                    <%= f.text_field :task %>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="large-12 columns">
-                    <div class="actions">
-                      <%= f.submit class: 'btn btn-default' %>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <% end %>
-            </div>
-
-            <div class="modal-footer">
-
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Nah.</button>
-            <button type="button" class="btn btn-primary">Save!</button>
+        <div class="row">
+          <div class="large-12 columns">
+            <%= f.label :list %>
+            <%= f.collection_select(:list_id, current_user.lists.all, :id, :name) %>
+            <%= f.label :item %>
+            <%= f.text_field :task %>
           </div>
         </div>
       </div>
-
-      <div class="table-responsive">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Kids Name</th>
-              <th>List</th>
-              <th>Item</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @items.each do |item| %>
-          <tr>
-            <td><%= item.list.kid.name %></td>
-            <td><%= item.list.name %></td>
-            <td><%= item.task %></td>
-          </tr>
-          <% end %>
-          </tbody>
-        </table>
-      </div>
     </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Nah.</button>
+      <%= f.submit class: 'btn btn-primary' %>
+    </div>
+    <% end %>
   </div>
 </div>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Item</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @items.each do |item| %>
+    <tr>
+      <td><%= item.task %></td>
+    </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add an Item</button>
