@@ -8,6 +8,9 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add a List</h4>
+        <div class="image">
+         <%= image_tag "panel_wide_01.png" %>
+         </div>
       </div>
       <div class="modal-body">
         <% if @list.errors.any? %>
@@ -33,15 +36,14 @@
 
         <div class="row">
           <div class="large-12 columns">
-            <div class="actions">
-              <%= f.submit class: 'button btn-default' %>
+            <div class="actions">  
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Nah.</button>
       <%= f.submit class: 'btn btn-primary' %>
     </div>
     <% end %> 
