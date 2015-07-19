@@ -22,20 +22,45 @@
  * Globals
  */
 
- $white_opaque: rgba(250, 250, 250, .3);
+ $white_opaque: rgba(250, 250, 250, .4);
+
+
+div.alert.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+  font-family: "blambot-pro",sans-serif;
+  font-size: 16pt;
+  text-align: center;
+  margin-top: 15px;
+}
+
+div.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+  font-family: "blambot-pro",sans-serif;
+  font-size: 16pt;
+  text-align: center;
+  margin-top: 15px;
+}
 
 /* Links */
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: #333;
   font-family: "blambot-pro",sans-serif;
+  transition: all .3s ease-in-out;
 }
 
-.navbar-brand {
+.navbar-inverse .navbar-brand {
   font-family:  "blambot-pro",sans-serif;
   font-size: 28pt;
-  }
+  text-align: right; 
+  color: rgba(250, 250, 250, 0.7);
+}
+  
 
 .kid-nav {
   background-color: aquamarine;
@@ -87,24 +112,29 @@ a:hover {
 .modal .modal-dialog .modal-header {
   background-color: #db9e36;
   .modal-title {
-    font:  "blambot-pro",sans-serif;
+    font: "blambot-pro",sans-serif;
     text-decoration: bold;
     color: #fff;
     font-size: 36px;
     text-align: center;
+    padding-bottom: 10px;
   }
 }
 .modal-content {
   position: relative;
   background-color: #fff;
+  font-size: 20px;
+  padding:0;
+  text-align: left;
   border: 0px; 
   border: 0px solid rgba(0, 0, 0, 0); 
   border-radius: 0px;
   -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0); 
   box-shadow: 0px 0px rgba(0, 0, 0, 0);
   background-clip: padding-box;
-  outline: 0;
+  outline: 0;  
 }
+  
   .modal-footer {
     text-align: right;
     background-color: #db9e36;
@@ -135,15 +165,13 @@ a:hover {
 /*
  * Base structure
  */
-
-html,
 body {
   height: 100%;
-  background-color: #fff;
+  background-color: #FEFBEF;
   font-family: inherit;
-  /*padding-top: 40px;*/
+  font-size: 25px;
+  /* padding-top: 40px; */
 }
-
 body {
   //color: #fff;
    text-align: center;
@@ -163,8 +191,8 @@ h1, {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -191,29 +219,34 @@ h1, {
 .masthead-nav > li {
   display: inline-block;
 }
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
+
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #fff; /* IE8 proofing */
-  color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
+  
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
   background-color: transparent;
   border-bottom-color: #a9a9a9;
-  border-bottom-color: rgba(255,255,255,.25);
+  border-bottom-color: rgba(255,255,255,.75);
 }
 .masthead-nav > .active > a,
 .masthead-nav > .active > a:hover,
 .masthead-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+div.side.image {
+  padding: 10px 10px 10px 10px;
+  opacity: 0.5;
+  width: 170px;
+  height: 60px;
+  display: inline-block;
+
 }
 
 @media (min-width: 768px) {
@@ -224,7 +257,6 @@ h1, {
     float: right;
   }
 }
-
 
 /*
  * Cover
@@ -244,7 +276,7 @@ h1, {
 .mastfoot {
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.5);
-
+  font-family: "blambot-pro",sans-serif;
   background-color: #999;
   background-color: rgba(153, 153, 153, .5);
   width: 100%;
