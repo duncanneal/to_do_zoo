@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  
+
   def index
     @kids = current_user.kids.all
     @kid = current_user.kids.new
@@ -7,6 +7,8 @@ class KidsController < ApplicationController
 
   def show
     @kid = current_user.kids.find(params[:id])
+    @lists = current_user.lists.all
+    @item = Item.all
     render :layout => false
   end
 
@@ -22,9 +24,15 @@ class KidsController < ApplicationController
     end
   end
 
+  def update
+    @item = Item.find(params[:id])
+    @item.update_attributes(item_params)
+    redirect_to root_path, notice: 'Task was successfully updated.'
+  end
+
   private
 
   def kid_params
-    params.require(:kid).permit(:name, :kidimg, :user_id)
+    params.require(:kid).permit(:name, :kidimg)
   end
 end

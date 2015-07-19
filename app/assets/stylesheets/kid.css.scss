@@ -16,15 +16,29 @@ body {
   margin-left: 35px;
 }*/
 
+.header-row {
+  background-color: #74b8e2;
+}
+
 .header-row .user {
 
+}
+
+/*img {
+  width: 120px;
+  margin: 20px;
+}*/
+
+.clip-circle {
+  -webkit-clip-path: circle(60px at center);
+  clip-path: circle(60px at center);
 }
 
 .header-row .user .icon {
   margin: 0;
   padding: 0;
   border-radius: 50%;
-  border: 10px solid #D99F59;
+  border: 15px solid #74b8e2;
   width: 150px;
   height: 150px;
   background-color: white;
@@ -51,13 +65,6 @@ body {
   display: inline;
   margin-left: 25px;
 }
-
-.header-row {
-  background-color: #74b8e2;
-  padding: 10px 0 30px 0;
-}
-
-
 
 .main-container {
   padding: $container-padding;

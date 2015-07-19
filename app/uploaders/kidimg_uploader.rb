@@ -6,9 +6,8 @@ class KidimgUploader < CarrierWave::Uploader::Base
   process resize_to_fit: [500, 500]
 
   version :thumb do
-    process resize_to_fill: [40,40]
+    process resize_to_fill: [120, 120]
   end
-
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick

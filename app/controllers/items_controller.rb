@@ -22,6 +22,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  def update
+    @item = Item.find(params[:id])
+    @item.update_attributes(item_params)
+    redirect_to root_path, notice: 'Task was successfully updated.'
+  end
+
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.

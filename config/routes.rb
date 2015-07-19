@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'lists/progress', :to => 'lists#progress'
 
   resources :kids
+
+  get 'kids/todo', :to => 'kids#todo'
   
   resources :lists do
     resources :items
