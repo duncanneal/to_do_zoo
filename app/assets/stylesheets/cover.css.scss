@@ -30,27 +30,12 @@ div.alert.alert-success {
   font-family: "blambot-pro",sans-serif;
   font-size: 16pt;
   text-align: center;
+  opacity: .5;
 }
 
  h3 {
   font-family: "blambot-pro",sans-serif;
   font-size: 20px;
-}
-
-/* Links: Home Dash Sgn Out */
-a,
-a:focus,
-a:hover {
-  color: #fff;
-  font-family: "blambot-pro",sans-serif;
-  transition: all .4s ease-in-out;
-}
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  color: #f2623e; 
-  border-bottom-color: #fff;
-  transition: all .4s ease-in-out;
 }
 
 // Video Background
@@ -73,22 +58,40 @@ video {
 .row_cover { 
 }
 
+/* Link: Sign-in */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+  transition: all .3s ease-in-out;
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #f2623e; 
+  border-bottom-color: #fff;
+  
+}
 /*
  * Header
  */
 .masthead-nav > li {
   display: inline-block;
+  font: "blambot-pro",sans-serif;
+  font-size: 17pt;
+  color: #f2633f; 
+  padding-right: 10px; 
 }
 .masthead-nav > li + li {
-  margin-left: 36px;
+  margin-left: 18px;
 }
 .masthead-nav > li > a {
-  padding-top: 90px;
+  padding-top: 50px;
   padding-right: 0;
   padding-left: 0;
-  padding-bottom: 0;
-  font-size: 25px;
+  padding-bottom: 10px;
   color: #fff; 
+  font-size: 30pt;
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
@@ -98,8 +101,6 @@ video {
   opacity: 0.5;
 }
 
-
-
 @media (min-width: 768px) {
   .masthead-brand {
     float: left;
@@ -108,17 +109,6 @@ video {
     float: right;
   }
 }
-
-/* Custom default button 
-.btn-default,
-.btn-default:hover,
-.btn-default:focus {
-  color: #333;
-  text-shadow: none;  Prevent inheritence from `body` 
-  background-color: #fff;
-  border: 1px solid #fff;
-}
-*/
 
 /* Field changes */
 .form-group-lg .form-control {

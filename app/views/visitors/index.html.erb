@@ -34,14 +34,14 @@
                 <div class="inner">
                   <nav>
                     <ul class="nav masthead-nav">
-                      <li><%= link_to 'Sign up', new_registration_path(resource_name) %></li>
                       <% if user_signed_in? %>
                       <li><%= link_to 'Dashboard', lists_path %></li>
                       <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
                       <% else %>
-                      <li><a href="#">Contact</a></li>
-                      <% end %>
-                    </ul>
+                      <li><%= link_to 'Sign up', new_registration_path(resource_name) %></li>
+                     <li>or sign in below:</li>
+                      <% end %> 
+                    </ul>  
                   </nav>
                 </div>
               </div>
