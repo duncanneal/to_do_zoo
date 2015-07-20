@@ -50,7 +50,11 @@
       <% @items.each do |item| %>
       <tr>
         <td><%= item.task %></td>
-        <td><%= item.is_complete %></td>
+        <td><% if item.is_complete == true %>
+                <p>Done!</p>
+                <% else %>
+                <p>Still working on this :/</p>
+                <% end %></td>
         </tr>
         <% end %>
       </tbody>
