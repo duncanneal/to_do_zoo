@@ -310,9 +310,16 @@ div.side.image {
   display: inline-block;
 }
 
-div.sidebar-image{
+div.sidebar-image {
   opacity: .5;
+}
 
+/* About page sets*/
+div.about-image {
+
+  margin-top: 30px;
+  margin-right: 85px;
+  padding-right: 15px;
 }
 
 @media (min-width: 768px) {
