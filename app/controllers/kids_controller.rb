@@ -7,7 +7,7 @@ class KidsController < ApplicationController
 
   def show
     @kid = current_user.kids.find(params[:id])
-    @lists = current_user.lists.all
+    @lists = @kid.lists.all
 
     if params[:list]
       @list = current_user.lists.find(params[:list])

@@ -6,10 +6,6 @@ class ListsController < ApplicationController
     @list = current_user.lists.new
   end
 
-  def progress
-
-  end
-
   def new
 
   end
