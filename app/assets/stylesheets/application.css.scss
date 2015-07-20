@@ -25,7 +25,7 @@
  $white_opaque: rgba(250, 250, 250, .4);
 
 
-div.alert.alert-success {
+ div.alert.alert-success {
   background-color: #dff0d8;
   border-color: #d6e9c6;
   color: #3c763d;
@@ -44,6 +44,57 @@ div.alert-danger {
   text-align: center;
   margin-top: 15px;
 }
+/*signup-signin*/
+.authform {
+  max-width: 400px;
+  margin-top: 30px;
+  padding: 20px 30px 30px;
+  color: #d99f59;
+  background-color: #d99f59;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 25px;
+     -moz-border-radius: 25px;
+          border-radius: 25px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+     -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+          box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+/*.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+  border-color: #fff;
+}*/
+div.form-group{
+  margin-top: 15px 15px 15px 15px;
+  a, a:focus, a:hover {
+  color: #d99f59;
+  font-size: 16pt;
+  font-family: "blambot-pro",sans-serif;
+  transition: all .3s ease-in-out;
+}
+}
+div.form-group input {
+  font-size: 16px;
+  width: 275px;
+  color: #206a99;
+  height: auto;
+  padding: 15px 10px 15px 10px;
+}
+.authform .button, .button-xs {
+  color: #fff;
+  text-align: center;
+  background-color: #337ab7;
+  margin-top: 10px;
+}
+input.button.center{
+  width: 275px;
+  height: 34px;
+}
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+    border-color: rgba(229, 103, 23, 0.8);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(229, 103, 23, 0.6);
+    outline: 0 none;
+}
 
 /* Links */
 a,
@@ -54,13 +105,18 @@ a:hover {
   transition: all .3s ease-in-out;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  padding-bottom: 10px;
+}
+
 .navbar-inverse .navbar-brand {
   font-family:  "blambot-pro",sans-serif;
   font-size: 28pt;
-  text-align: right; 
+  text-align: right;
   color: rgba(250, 250, 250, 0.7);
 }
-  
+
 
 .kid-nav {
   background-color: aquamarine;
@@ -134,38 +190,38 @@ a:hover {
   background-clip: padding-box;
   outline: 0;  
 }
-  
-  .modal-footer {
-    text-align: right;
-    background-color: #db9e36;
-    padding-top: 0;
-    border-top:0;
 
-      input.btn-default, button.btn.btn-default {
-        background: #bf4b32;
-        border: solid 1.5px #f2633f;
-      }
+.modal-footer {
+  text-align: right;
+  background-color: #db9e36;
+  padding-top: 0;
+  border-top:0;
 
-      input.btn-default, button.btn.btn-default,
-      input.btn-primary, button.btn.btn-primary {
-        box-sizing: border-box;
-        margin-top: 20px;
-        padding: 15px 15px;
-        text-align: center;
-        font: 24px/24px  "blambot-pro",sans-serif;
-        text-decoration: bold;
-        color: #fddea5;
-        border-radius: 10px;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-      }
-    }
+  input.btn-default, button.btn.btn-default {
+    background: #bf4b32;
+    border: solid 1.5px #f2633f;
+  }
+
+  input.btn-default, button.btn.btn-default,
+  input.btn-primary, button.btn.btn-primary {
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 15px 15px;
+    text-align: center;
+    font: 24px/24px  "blambot-pro",sans-serif;
+    text-decoration: bold;
+    color: #fddea5;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
 
 /*
  * Base structure
  */
-body {
+ body {
   height: 100%;
   background-color: #FEFBEF;
   font-family: inherit;
@@ -174,8 +230,8 @@ body {
 }
 body {
   //color: #fff;
-   text-align: center;
-   font-family: inherit;
+  text-align: center;
+  font-family: inherit;
   
 }
 
@@ -192,7 +248,7 @@ h1, {
   height: 100%; /* For at least Firefox */
   min-height: 100%;
   /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -211,17 +267,23 @@ h1, {
 /*
  * Header
  */
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  padding:20px 25px 10px 20px;
+}
+.navbar-inverse .navbar-brand {
+  font-family:  "blambot-pro",sans-serif;
+  font-size: 28pt;
+  text-align: right;
+  color: rgba(250, 250, 250, 0.7);
 }
 
 .masthead-nav > li {
   display: inline-block;
 }
-
 .masthead-nav > li > a {
-  padding-right: 0;
+  padding-right: 0px;
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
@@ -246,7 +308,18 @@ div.side.image {
   width: 170px;
   height: 60px;
   display: inline-block;
+}
 
+div.sidebar-image {
+  opacity: .5;
+}
+
+/* About page sets*/
+div.about-image {
+
+  margin-top: 30px;
+  margin-right: 85px;
+  padding-right: 15px;
 }
 
 @media (min-width: 768px) {
@@ -255,13 +328,14 @@ div.side.image {
   }
   .masthead-nav {
     float: right;
+    padding-top: 25px;
   }
 }
 
 /*
  * Cover
  */
-.cover {
+ .cover {
   padding: 0 20px;
 }
 .cover .btn-lg {
@@ -273,7 +347,7 @@ div.side.image {
  * Footer
  */
 
-.mastfoot {
+ .mastfoot {
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.5);
   font-family: "blambot-pro",sans-serif;
@@ -293,7 +367,7 @@ div.side.image {
  * Affix and center
  */
 
-@media (min-width: 768px) {
+ @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
     position: fixed;

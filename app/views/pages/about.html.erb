@@ -1,9 +1,15 @@
 <% content_for :title do %>About<% end %>
-<h3>About the To Do Zoo</h3>
-Using the To Do Zoo system help make chores fun for kids and easy for parents. Kids earn points by completing chores that they can turn in for real-life rewards like an hour of video games or ice cream.
-<p>
-This web application was created with
-<%= link_to('Rails Composer', 'http://railsapps.github.io/rails-composer/') %>
-from the <%= link_to('RailsApps project', 'http://railsapps.github.io/') %> 
-and the minds of Duncan Neal and Derek Dyer.
-</p>
+<body>
+<h1>Welcome!</h1>
+  <h2>The To Do Zoo and you:</h2>
+  <p>Using the To Do Zoo system help make chores fun for kids and easy for parents. As a parent, you will take pride in watching your cubs accomplish large tasks by taking small steps. Kids earn badges by completing chores that they can turn in for real-life rewards such as extra playtime or dessert!
+  </p>
+  <p>This web application was created with <%= link_to('Rails Composer', 'http://railsapps.github.io/rails-composer/') %>
+    from the <%= link_to('RailsApps project', 'http://railsapps.github.io/') %>, Illustrator, Photoshop, a whole lotta love, music, and the minds of <%= link_to('Derek Dyer', 'http://digitalderek.com') %>  and <%= link_to('Duncan Neal', 'http://duncan-neal.squarespace.com') %>.
+  </p>
+  <div class="about-image">
+    <%= image_tag "lions.png" %>
+  </div>
+</body>
+
+
