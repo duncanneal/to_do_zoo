@@ -268,7 +268,7 @@ h1, {
  * Header
  */
 
- .navbar-inverse .navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a {
   color: #fff;
   padding:20px 25px 10px 20px;
 }
@@ -308,6 +308,10 @@ div.side.image {
   width: 170px;
   height: 60px;
   display: inline-block;
+}
+
+div.sidebar-image{
+  opacity: .5;
 
 }
 
