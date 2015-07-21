@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = @list.items.all
-    @item = @list.items.new
+    @item  = @list.items.new
   end
 
   def new

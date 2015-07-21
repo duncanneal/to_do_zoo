@@ -2,11 +2,11 @@ class KidsController < ApplicationController
 
   def index
     @kids = current_user.kids.all
-    @kid = current_user.kids.new
+    @kid  = current_user.kids.new
   end
 
   def show
-    @kid = current_user.kids.find(params[:id])
+    @kid   = current_user.kids.find(params[:id])
     @lists = @kid.lists
 
 
