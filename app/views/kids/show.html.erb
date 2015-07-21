@@ -42,22 +42,33 @@
       <div class="row">
         <h1 class="page-heading"><%= @kid.name %>'s Chores</h1>
       </div>
-
       <div class="row">
         <div class="col-lg-3 col-md-3">
+          <% unless @lists.blank? %>
           <% @lists.each do |list| %>
-          <%= image_tag "broom.png" %> 
-          <h3><%= link_to list.name, list_items_path(list) %></h3>
+            <div class="list<%= ' current' if list.id == @list.id %>">
+              <%= image_tag "broom.png" %> 
+              <h3><%= link_to list.name, kid_path(@kid, :list => list.id) %></h3>
+            </div>
           <% end %>
         </div>
         <div class="col-lg-9 col-md-9 chores-description-container">
           <table>
-            <% @item.each do |item| %>
+            <% @items.each do |item| %>
             <tr>
               <td><%= item.task %></td>
+              <%= form_for([item.list, item]) do |f| %>
+              <td><%= f.label "Item status" %>
+                <%= f.check_box :is_complete %>
+                <%= f.submit "I'm done with this!", class: "button small radius" %>
+                <% end %>
+              </td>
             </tr>
             <% end %>
           </table>
+          <% else %>
+          <h1>Oh Snap! You don't have any lists yet!</h1>
+          <% end %>
         </div>
       </div>
     </div>

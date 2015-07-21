@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.update_attributes(item_params)
-    redirect_to root_path, notice: 'Task was successfully updated.'
+    redirect_to kids_path, notice: 'Great Job!'
   end
 
   private

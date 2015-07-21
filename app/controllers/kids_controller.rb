@@ -7,8 +7,26 @@ class KidsController < ApplicationController
 
   def show
     @kid = current_user.kids.find(params[:id])
-    @lists = current_user.lists.all
-    @item = Item.all
+    @lists = @kid.lists
+
+
+    if params[:list]
+      @list = current_user.lists.find(params[:list])
+    else
+      @list = @kid.lists.first
+    end
+
+    #puts params[:list]
+
+    #@list.items.each do |item|
+     # puts item.task
+    #end
+    unless @list.blank?
+    @items = @list.items
+  else
+    @items == nil
+  end
+  
     render :layout => false
   end
 
@@ -22,12 +40,6 @@ class KidsController < ApplicationController
         format.html { render :new }
       end
     end
-  end
-
-  def update
-    @item = Item.find(params[:id])
-    @item.update_attributes(item_params)
-    redirect_to root_path, notice: 'Task was successfully updated.'
   end
 
   private
