@@ -217,6 +217,8 @@ body {
 
 .btn-primary,{
   box-sizing: border-box;
+  border-radius: 1px 1px 20px 20px;
+  moz-border-radius: 1px 1px 20px 20px;
   margin-top: 28px;
   padding: 15px 0;
   text-align: center;
@@ -225,7 +227,6 @@ body {
   color: #597B99;
   background: #bce4fb;
   border: solid 1.5px #39523F;
-  border-radius: 10px;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;

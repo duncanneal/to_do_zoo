@@ -13,13 +13,21 @@ body {
 li {
   padding-left: 60px;
 }
-
-/*.logo {
-  position: relative;
-  display: inline-block;
+/*Kids table*/
+table {
+  background-color: transparent;
+  font-size: 18pt;
+}
+tbody{
+  background-color: #bce3c6;
   margin-top: 10px;
-  margin-left: 35px;
-  }*/
+}
+div.head_logo, {
+  padding: 20px 20px 15px 10px;
+  opacity: 0.5;
+  float: right;
+  display: inline-block;
+ }
 
   .header-row {
     background-color: #74b8e2;
@@ -98,10 +106,31 @@ li {
   }
 
   .list {
-    border: 5px solid pink;
+    border: 5px solid #db9e36;
 
     &.current {
-      border-color: red;
-
+      border-color: #d99f59;
     }
   }
+  label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-size: 12pt;
+  color: #105b63;
+  font-weight: bold;
+}
+td, th {
+  padding: 10px;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  border : solid 2px #d15137;
+  border-radius: 20px 3px 20px 4px;
+  moz-border-radius: 20px 3px 20px 4px;
+  font-size : 16px;
+  color : #ffffff;
+  padding : 5px 15px;
+  background-color : #f2633f;
+
+}
+
