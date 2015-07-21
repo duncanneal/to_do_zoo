@@ -7,15 +7,26 @@ class KidsController < ApplicationController
 
   def show
     @kid = current_user.kids.find(params[:id])
-    @lists = @kid.lists.all
+    @lists = @kid.lists
+
 
     if params[:list]
       @list = current_user.lists.find(params[:list])
     else
-      @list = current_user.lists.first
+      @list = @kid.lists.first
     end
 
+    #puts params[:list]
+
+    #@list.items.each do |item|
+     # puts item.task
+    #end
+    unless @list.blank?
     @items = @list.items
+  else
+    @items == nil
+  end
+  
     render :layout => false
   end
 
