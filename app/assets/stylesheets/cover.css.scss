@@ -49,7 +49,7 @@ video {
   height: auto;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-  background: url('https://s3.amazonaws.com/todozooresources/HomePage/Playground.png') no-repeat;
+  background: url('https://s3.amazonaws.com/todozooresources/HomePage/Playground.png');
   background-size: cover;
   transition: 1s opacity;
 }
