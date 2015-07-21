@@ -35,7 +35,7 @@
           <li><%= image_tag "screentime-02.png" %></li>
         </ul>
       </div>
-          <%# link_to 'Dashboard', lists_path %>
+        
       <%= render 'layouts/messages' %>
       <div class="head_logo">
         <%= image_tag "logo_dog_white_kid.png" %>
@@ -49,7 +49,7 @@
         <div class="col-lg-3 col-md-3">
           <% unless @lists.blank? %>
           <% @lists.each do |list| %>
-            <div class="list<%= ' current' if list.id == @list.id %>">
+            <div class="list<%= 'current' if list.id == @list.id %>">
               <%= image_tag "broom.png" %> 
               <h3><%= link_to list.name, kid_path(@kid, :list => list.id) %></h3>
             </div>
@@ -61,7 +61,6 @@
             <tr>
               <td><%= item.task %></td>
               <%= form_for([item.list, item]) do |f| %>
-              <td><%= f.label "Item status" %>
                 <%= f.check_box :is_complete %>
                 <%= f.submit "I'm done with this!", class: "button small radius" %>
                 <% end %>
