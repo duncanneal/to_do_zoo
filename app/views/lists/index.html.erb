@@ -10,44 +10,44 @@
         <h4 class="modal-title" id="myModalLabel">Add a List</h4>
         <div class="image">
          <%= image_tag "panel_wide_01.png" %>
-         </div>
+       </div>
+     </div>
+     <div class="modal-body">
+      <% if @list.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@kid.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+          <% @list.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
       </div>
-      <div class="modal-body">
-        <% if @list.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@kid.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <% end %>
 
-          <ul>
-            <% @list.errors.full_messages.each do |message| %>
-            <li><%= message %></li>
-            <% end %>
-          </ul>
+      <div class="row">
+        <div class="large-12 columns">
+          <%= f.label :kid %>
+          <%= f.collection_select(:kid_id, current_user.kids, :id, :name) %>
+          <%= f.label :list %>
+          <%= f.text_field :name %>
         </div>
-        <% end %>
+      </div>
 
-        <div class="row">
-          <div class="large-12 columns">
-            <%= f.label :kid %>
-            <%= f.collection_select(:kid_id, current_user.kids, :id, :name) %>
-            <%= f.label :list %>
-            <%= f.text_field :name %>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="actions">  
-            </div>
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="actions">  
           </div>
         </div>
       </div>
     </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-default" data-dismiss="modal">Nah.</button>
-      <%= f.submit class: 'btn btn-primary' %>
-    </div>
-    <% end %> 
   </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Nah.</button>
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+  <% end %> 
+</div>
 </div>
 
 <div class="table-responsive">
@@ -61,18 +61,19 @@
     </thead>
     <tbody>
       <% @lists.each do |list| %>
-        <tr>
-          <td><%= link_to list.name, list_items_path(list) %></td>
-          <td><%= list.kid.name %></td>
-          <td><div class="progress">
-                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">
-                <span class="sr-only">70% Complete</span>
-              </div>
-            </div></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+      <tr>
+        <td><%= link_to list.name, list_items_path(list) %></td>
+        <td><%= list.kid.name %></td>
+        <td><div class="progress">
+          <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+            <span class="sr-only">70% Complete</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
 </div>
 
 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add a List</button>
