@@ -21,7 +21,7 @@ class ListsController < ApplicationController
     end
   end
 
-def destroy
+  def destroy
     @list.destroy
     respond_to do |format|
       format.html { redirect_to lists_url, notice: 'List was successfully destroyed.' }
@@ -31,8 +31,8 @@ def destroy
   private
 
   def set_list
-      @list = List.find(params[:id])
-    end
+    @list = List.find(params[:id])
+  end
 
   def list_params
     params.require(:list).permit(:name, :kid_id)

@@ -22,11 +22,11 @@ class KidsController < ApplicationController
      # puts item.task
     #end
     unless @list.blank?
-    @items = @list.items
-  else
-    @items == nil
-  end
-  
+      @items = @list.items
+    else
+      @items == nil
+    end
+    
     render :layout => false
   end
 
