@@ -51,11 +51,24 @@
       <% @items.each do |item| %>
       <tr>
         <td><%= item.task %></td>
-        <td><% if item.is_complete == true %>
-                <p>Done!</p>
-                <% else %>
-                <p>Still working on this :/</p>
-                <% end %>
+        <td>
+        <% if item.is_complete == true %>
+          <p>Done!</p>
+        <% else %>
+          <p>Still working on this :/</p>
+        <% end %>
+        </td>
+        <td>
+          <% if item.item_image.blank? %>
+          <p></p>
+          <% else %>
+          <%= image_tag item.item_image.thumb %>
+        <% end %>
+        </td>
+        <td>
+        <%= link_to list_item_path(item.list, item), method: :delete, data: { confirm: "Are you sure?" } do %>
+        <i class="fa fa-trash"></i>
+        <% end %>
         </td>
       </tr>
         <% end %>

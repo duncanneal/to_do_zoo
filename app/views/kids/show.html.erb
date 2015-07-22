@@ -35,7 +35,7 @@
           <li><%= image_tag "screentime-02.png" %></li>
         </ul>
       </div>
-        
+
       <%= render 'layouts/messages' %>
       <div class="head_logo">
         <%= image_tag "logo_dog_white_kid.png" %>
@@ -49,10 +49,10 @@
         <div class="col-lg-3 col-md-3">
           <% unless @lists.blank? %>
           <% @lists.each do |list| %>
-            <div class="list<%= ' current' if list.id == @list.id %>">
-              <%= image_tag "broom.png" %> 
-              <h3><%= link_to list.name, kid_path(@kid, :list => list.id) %></h3>
-            </div>
+          <div class="list<%= ' current' if list.id == @list.id %>">
+            <%= image_tag "broom.png" %> 
+            <h3><%= link_to list.name, kid_path(@kid, :list => list.id) %></h3>
+          </div>
           <% end %>
         </div>
         <div class="col-lg-9 col-md-9 chores-description-container">
@@ -61,10 +61,52 @@
             <tr>
               <td><%= item.task %></td>
               <td>
-              <%= form_for([item.list, item]) do |f| %>
+                <%= form_for([item.list, item]) do |f| %>
                 <%= f.check_box :is_complete %>
                 <%= f.submit "I'm done with this!", class: "button small radius" %>
                 <% end %>
+              </td>
+              <td><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#takePic">Take a pic of your finished chore!</button>
+                <!-- Pic Modal -->
+    <div class="modal fade" id="takePic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <%= form_for([item.list, item]) do |f| %>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Take a Chore Pic</h4>
+            <div class="image">
+             <%= image_tag "panel_wide_01.png" %>
+           </div>
+         </div>
+         <div class="modal-body">
+          <% if @kid.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@kid.errors.count, "error") %> prohibited this post from being saved:</h2>
+            <ul>
+              <% @kid.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+          <% end %>
+
+          <div class="row">
+            <div class="large-12 columns">
+              <%= f.label "Add a picture:" %>
+              <%= f.file_field :item_image  %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Nah.</button>
+        <%= f.submit class: 'btn btn-primary' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <!-- Pic Modal -->
               </td>
             </tr>
             <% end %>
@@ -76,5 +118,5 @@
       </div>
     </div>
 
-  </body>
-  </html>
+</body>
+</html>
