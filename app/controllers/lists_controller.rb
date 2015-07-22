@@ -3,11 +3,10 @@ class ListsController < ApplicationController
   
   def index
     @lists = current_user.lists.all
-    @list = current_user.lists.new
+    @list  = current_user.lists.new
   end
 
   def new
-
   end
 
   def create

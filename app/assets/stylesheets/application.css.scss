@@ -44,7 +44,9 @@ div.alert-danger {
   text-align: center;
   margin-top: 15px;
 }
-/*signup-signin*/
+/*
+ * signup-signin
+ */
 .authform {
   max-width: 400px;
   margin-top: 30px;
@@ -71,7 +73,7 @@ div.alert-danger {
   }
   div.form-group input {
     font-size: 16px;
-    width: 275px;
+    min-width: 275px;
     color: #206a99;
     height: auto;
     padding: 15px 10px 15px 10px;
@@ -83,8 +85,9 @@ div.alert-danger {
     margin-top: 10px;
   }
   input.button.center{
-    width: 275px;
+    min-width: 275px;
     height: 34px;
+    font: "blambot-pro",sans-serif;
   }
   textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
     border-color: rgba(229, 103, 23, 0.8);
@@ -92,7 +95,9 @@ div.alert-danger {
     outline: 0 none;
   }
 
-  /* Links */
+  /*
+   * Links
+   */
   a,
   a:focus,
   a:hover {
@@ -113,15 +118,17 @@ div.alert-danger {
     color: rgba(250, 250, 250, 0.7);
   }
 
-
-  .kid-nav {
+  /*.kid-nav {
     background-color: aquamarine;
     margin-bottom: 0;
     padding-left: 0;
     list-style: none;
   }
+  */
 
-  /* Custom default button */
+  /* 
+   * Custom default button
+   */
   .btn-default,
   .btn-default:hover,
   .btn-default:focus {
@@ -132,7 +139,9 @@ div.alert-danger {
   }
 
 
-  /* Field changes*/
+  /* 
+   *Field changes
+   */
   .form-group-lg .form-control {
     height: 70px;
     padding: 10px 16px;
@@ -142,25 +151,33 @@ div.alert-danger {
     font-family:  "blambot-pro",sans-serif;
   }
 
-  /* This was added to make space on the kids place page*/
+  /*
+  This was added to make space on the kids place page
+  */
   .top-buffer {
     margin-top: 150px;
   }
 
-  /* This is to overwrite the style that removes padding around rows */
+  /* 
+  This is to overwrite the style that removes padding around rows 
+  */
   .row, section {
     margin-left: 0px;
     margin-right: 0px;
   }
 
-  /* Custom authform */
+  /*
+  Custom authform
+  */
   .todo_authform {
     padding-top: 30px;
     max-width: 320px;
     margin: 0 auto;
   }
 
-  /* Modal Styles */
+  /* 
+  Modal Styles 
+  */
   .modal .modal-dialog .modal-header {
     background-color: #db9e36;
     .modal-title {
@@ -243,8 +260,6 @@ h1, {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-  box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
 }
 .site-wrapper-inner {
   display: table-cell;
@@ -263,7 +278,6 @@ h1, {
 /*
  * Header
  */
-
  .navbar-inverse .navbar-nav > li > a {
   color: #fff;
   padding:20px 25px 10px 20px;
@@ -372,7 +386,9 @@ div.about-image {
   .site-wrapper-inner {
     vertical-align: middle;
   }
-  /* Handle the widths */
+  /* 
+  Handle the widths 
+  */
   .masthead,
   .cover-container {
     width: 200%; /* Must be percentage or pixels for horizontal alignment */
@@ -385,7 +401,9 @@ div.about-image {
   }
 }
 
-/*Buttons*/
+/*
+Buttons
+*/
 .btn-primary  {
   color: #74b8e2;
   background: #206a99;
