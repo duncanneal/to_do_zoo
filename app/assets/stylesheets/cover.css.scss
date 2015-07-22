@@ -36,6 +36,8 @@ div.alert.alert-success {
  h3 {
   font-family: "blambot-pro",sans-serif;
   font-size: 20px;
+  text-shadow: 2px 3px 2px #231F20;
+
 }
 
 // Video Background
@@ -170,6 +172,11 @@ input[type="submit"] {
 /*
  * Base structure
  */
+h3 {
+  font-family: "blambot-pro",sans-serif;
+  font-size: 20px;
+  text-shadow: 3px 3px 2px #231F20;
+}
 
 html,
 body {
@@ -179,7 +186,7 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  text-shadow: 2px 3px 2px #231F20;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
