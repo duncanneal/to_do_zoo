@@ -49,7 +49,7 @@ video {
   height: auto;
   z-index: -100;
   transform: translateX(-50%) translateY(-50%);
-  background: url('https://s3.amazonaws.com/todozooresources/HomePage/Playground.png') no-repeat;
+  //background: url('https://s3.amazonaws.com/todozooresources/HomePage/Playground.png') no-repeat;
   background-size: cover;
   transition: 1s opacity;
 }
@@ -101,13 +101,16 @@ a:hover {
   opacity: 0.5;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 350px) {
   .masthead-brand {
     float: left;
   }
   .masthead-nav {
     float: right;
   }
+
+  //body { background: url('https://s3.amazonaws.com/todozooresources/HomePage/Playground.png') }
+  //#bgvid { display: none; }
 }
 
 /* Field changes */
