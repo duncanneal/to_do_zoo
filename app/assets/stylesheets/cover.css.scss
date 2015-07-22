@@ -101,7 +101,11 @@ a:hover {
   opacity: 0.5;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 375px) {
+  
+  body { background: url('https://s3.amazonaws.com/todozooresources/HomePage/Playground.png') #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+
   .masthead-brand {
     float: left;
   }
@@ -248,9 +252,8 @@ body {
  @media (min-width: 768px) {
   /* Pull out the header and footer */
   
-  body { background: url('https://s3.amazonaws.com/todozooresources/HomePage/Playground.png') #000 no-repeat center center fixed; }
-  #bgvid { display: none; }
-
+body { background: url('https://s3.amazonaws.com/todozooresources/HomePage/Playground.png') #000 no-repeat center center fixed; }
+#bgvid { display: none; }
 
 .masthead {
   position: fixed;
