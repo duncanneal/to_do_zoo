@@ -59,8 +59,8 @@
           <table>
             <% @items.each do |item| %>
             <tr class="<%= 'complete' if item.is_complete? %>">
-              <td><%= item.task %></td>
-              <td>
+              <td class="task-name"><%= item.task %></td>
+              <td class="complete-btn">
                 <% unless item.is_complete? %>
                   <%= form_for([item.list, item]) do |f| %>
                   <input type="hidden" value="1" name="item[is_complete]" id="item_is_complete">

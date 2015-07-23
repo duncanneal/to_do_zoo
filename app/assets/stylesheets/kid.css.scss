@@ -20,10 +20,14 @@ table {
   width: 100%;
 
   tr.complete {
-    opacity: 0.25;
-    text-decoration: line-through;
+
+    td.task-name, td.complete-btn, .fa-camera {
+      text-decoration: line-through;
+      opacity: 0.25;
+    }
   }
 }
+
 tbody{
   background-color: #bce3c6;
   margin-top: 10px;
@@ -33,15 +37,15 @@ div.head_logo, {
   opacity: 0.5;
   float: right;
   display: inline-block;
- }
+}
 
-  .header-row {
-    background-color: #74b8e2;
-  }
+.header-row {
+  background-color: #74b8e2;
+}
 
-  .header-row .user {
+.header-row .user {
 
-  }
+}
 
 /*img {
   width: 120px;
@@ -109,9 +113,9 @@ div.head_logo, {
     /* Set the fixed height of the footer here 
     height: 85px;
     background-color: #D99F59;
-  }*/
+    }*/
 
-  .list {
+    .list {
     // border: 5px solid #db9e36;
     padding: 10px 0 10px 10px;
 
@@ -133,31 +137,31 @@ div.head_logo, {
     }
   }
   label {
-  display: inline-block;
-  max-width: 100%;
-  margin-bottom: 5px;
-  font-size: 12pt;
-  color: #105b63;
-  font-weight: bold;
-}
-td, th {
-  padding: 10px;
-}
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
-  border : solid 2px #d15137;
-  border-radius: 20px 3px 20px 4px;
-  moz-border-radius: 20px 3px 20px 4px;
-  font-size : 16px;
-  color : #ffffff;
-  padding : 5px 15px;
-  background-color : #f2633f;
-}
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-size: 12pt;
+    color: #105b63;
+    font-weight: bold;
+  }
+  td, th {
+    padding: 10px;
+  }
+  button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    border : solid 2px #d15137;
+    border-radius: 20px 3px 20px 4px;
+    moz-border-radius: 20px 3px 20px 4px;
+    font-size : 16px;
+    color : #ffffff;
+    padding : 5px 15px;
+    background-color : #f2633f;
+  }
 
-body {
-  background:
+  body {
+    background:
     url(vector_panel_tall.png) top right repeat-y;
     background-color: #8ac99a;
-}
+  }
 
 /* 
   Modal Styles 
@@ -207,7 +211,7 @@ body {
       text-decoration: bold;
       border-radius: 10px;
     }
- 
+
     input.btn-primary, button.btn.btn-primary, :hover {
       box-sizing: border-box;
       margin-top: 20px;
@@ -224,4 +228,4 @@ body {
       transition: all 0.3s ease-in-out;
     }
   }
-    
+
