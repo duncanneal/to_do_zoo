@@ -24,9 +24,9 @@
 
         <div class="form-group row">
           <div class="large-12 columns">
-            <%= f.label :list %>
+            <%= f.label :task %>
             <%= f.collection_select(:list_id, current_user.lists.all, :id, :name, {}, :class=> 'form-control input-lg') %>
-            <%= f.label :item %>
+            <%= f.label :step %>
             <%= f.text_field :task, :class => 'form-control' %>
           </div>
         </div>
@@ -34,7 +34,7 @@
     </div>
     <div class="modal-footer">
       <button type="button" class="btn btn-default" data-dismiss="modal">Nah.</button>
-      <%= f.submit class: 'btn btn-primary' %>
+      <%= f.submit "Create a Step", class: 'btn btn-primary' %>
     </div>
     <% end %>
   </div>
@@ -61,7 +61,7 @@
         <td>
           <% unless item.item_image.blank? %>
             <%= image_tag item.item_image.thumb %>
-          <% end %>
+        <% end %>
         </td>
         <td>
         <%= link_to list_item_path(item.list, item), method: :delete, data: { confirm: "Are you sure?" } do %>
