@@ -62,7 +62,7 @@
               <td><%= item.task %></td>
               <td>
                 <%= form_for([item.list, item]) do |f| %>
-                <%= f.check_box :is_complete %>
+                <input type="hidden" value="1" name="item[is_complete]" id="item_is_complete">
                 <%= f.submit "I'm done with this!", class: "button small radius" %>
                 <% end %>
               </td>

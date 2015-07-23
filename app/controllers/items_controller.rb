@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.update_attributes(item_params)
-    redirect_to kids_path, notice: 'Great Job!'
+    redirect_to kid_path, notice: 'Great Job!'
   end
 
    def destroy
@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
 
     @item.destroy
     respond_to do |format|
-      format.html { redirect_to lists_url, notice: 'Post was successfully destroyed.' }
+      format.html { redirect_to list_items_url, notice: 'Item Removed.' }
     end
 
  #   if @item.destroy
