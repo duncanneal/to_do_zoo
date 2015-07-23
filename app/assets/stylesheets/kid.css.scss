@@ -138,3 +138,67 @@ body {
     url(vector_panel_tall.png) top right repeat-y;
     background-color: #8ac99a;
 }
+
+/* 
+  Modal Styles 
+  */
+  .modal .modal-dialog .modal-header {
+    background-color: #db9e36;
+    .modal-title {
+      font: "blambot-pro",sans-serif;
+      text-decoration: bold;
+      color: #fff;
+      font-size: 36px;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+  }
+  .modal-image {
+    padding-left: 30px;
+  }
+  .modal-content {
+    position: relative;
+    background-color: #fff;
+    font-size: 20px;
+    padding:0;
+    text-align: left;
+    background-clip: padding-box;
+    outline: 0;  
+  }
+
+  .modal-footer {
+    text-align: right;
+    background-color: #db9e36;
+    padding-top: 0;
+    border-top:0;
+
+    input.btn-default, button.btn.btn-default {
+      background: #bf4b32;
+      color: #fddea5;
+      border: solid 1.5px #f2633f;
+      box-sizing: border-box;
+      margin-top: 20px;
+      padding: 15px 15px;
+      text-align: center;
+      font: 24px/24px  "blambot-pro",sans-serif;
+      text-decoration: bold;
+      border-radius: 10px;
+    }
+ 
+    input.btn-primary, button.btn.btn-primary, :hover {
+      box-sizing: border-box;
+      margin-top: 20px;
+      padding: 15px 15px;
+      text-align: center;
+      font: 24px/24px  "blambot-pro",sans-serif;
+      text-decoration: bold;
+      color: #fddea5;
+      border-color: #74b8e2;
+      background: #206a99;
+      border-radius: 10px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+    
