@@ -58,15 +58,19 @@
         <div class="col-lg-9 col-md-9 chores-description-container">
           <table>
             <% @items.each do |item| %>
-            <tr>
+            <tr class="<%= 'complete' if item.is_complete? %>">
               <td><%= item.task %></td>
               <td>
-                <%= form_for([item.list, item]) do |f| %>
-                <input type="hidden" value="1" name="item[is_complete]" id="item_is_complete">
-                <%= f.submit "I'm done with this!", class: "button small radius" %>
+                <% unless item.is_complete? %>
+                  <%= form_for([item.list, item]) do |f| %>
+                  <input type="hidden" value="1" name="item[is_complete]" id="item_is_complete">
+                  <%= f.submit "I'm done with this!", class: "button small radius" %>
+                  <% end %>
                 <% end %>
               </td>
-              <td><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#takePic">Take a pic of your finished step!</button>
+              <td><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#takePic">
+                <i class="fa fa-camera"></i>
+              </button>
                 <!-- Pic Modal -->
     <div class="modal fade" id="takePic" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -91,10 +95,10 @@
           </div>
           <% end %>
 
-          <div class="row">
-            <div class="large-12 columns">
+          <div class="form-group row">
+            <div class="col-md-6 col-md-offset-3">
               <%= f.label "Add a picture:" %>
-              <%= f.file_field :item_image  %>
+              <%= f.file_field :item_image, :class => 'form-control'  %>
             </div>
           </div>
         </div>

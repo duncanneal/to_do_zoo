@@ -189,6 +189,8 @@ div.alert-danger {
     text-align: left;
     border-radius: 0px;
     background-clip: padding-box; 
+    box-shadow: none;
+    border: none;
   }
 
   .modal-footer {
@@ -224,15 +226,14 @@ div.alert-danger {
  body {
   height: 100%;
   background-color: #FEFBEF;
-  font-family: inherit;
+  // font-family: inherit;
   font-size: 25px;
   /* padding-top: 40px; */
 }
 body {
   //color: #fff;
   text-align: center;
-  font-family: inherit;
-  
+  // font-family: inherit;  
 }
 
 h1, {

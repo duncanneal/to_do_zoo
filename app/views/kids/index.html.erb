@@ -31,24 +31,24 @@
         </div>
         <% end %>
 
-          <div class="row">
+          <div class="form-group row">
             <div class="large-12 columns">
               <%= f.label "kid's name:" %>
-              <%= f.text_field :name %>
+              <%= f.text_field :name, :class => 'form-control' %>
             </div>
           </div>
 
-          <div class="row">
+          <div class="form-group row">
             <div class="large-12 columns">
               <%= f.label "Add a picture:" %>
-              <%= f.file_field :kidimg  %>
+              <%= f.file_field :kidimg, :class => 'form-control'  %>
             </div>
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Nah.</button>
-        <%= f.submit class: 'btn btn-lg' %>
+        <%= f.submit class: 'btn btn-primary' %>
       </div>
       <% end %>
     </div>

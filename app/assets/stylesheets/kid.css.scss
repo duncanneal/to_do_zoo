@@ -17,6 +17,12 @@ li {
 table {
   background-color: transparent;
   font-size: 18pt;
+  width: 100%;
+
+  tr.complete {
+    opacity: 0.25;
+    text-decoration: line-through;
+  }
 }
 tbody{
   background-color: #bce3c6;
@@ -106,10 +112,24 @@ div.head_logo, {
   }*/
 
   .list {
-    border: 5px solid #db9e36;
+    // border: 5px solid #db9e36;
+    padding: 10px 0 10px 10px;
 
     &.current {
-      border-color: #d99f59;
+      background-color: #d99f59;
+
+      a {
+        color: #bce3c6;  
+      }
+    }
+
+    img { 
+      float: left;
+    }
+
+    h3 { 
+      line-height: 50px;
+      margin: 0 0 0 60px;
     }
   }
   label {
@@ -163,7 +183,10 @@ body {
     padding:0;
     text-align: left;
     background-clip: padding-box;
-    outline: 0;  
+    outline: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
   }
 
   .modal-footer {
