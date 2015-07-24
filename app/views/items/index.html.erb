@@ -52,26 +52,26 @@
       <tr>
         <td><%= item.task %></td>
         <td>
-        <% if item.is_complete == true %>
-          <p>Done!</p>
-        <% else %>
-          <p>Still working on this :/</p>
-        <% end %>
+          <% if item.is_complete == true %>
+            <p>Done!</p>
+          <% else %>
+            <p>Still working on this :/</p>
+          <% end %>
         </td>
         <td>
           <% unless item.item_image.blank? %>
             <%= image_tag item.item_image.thumb %>
-        <% end %>
+          <% end %>
         </td>
         <td>
-        <%= link_to list_item_path(item.list, item), method: :delete, data: { confirm: "Are you sure?" } do %>
-        <i class="fa fa-trash"></i>
-        <% end %>
+          <%= link_to list_item_path(item.list, item), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
         </td>
       </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <!-- Button trigger modal -->
-  <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add a Step</button>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add a Step</button>

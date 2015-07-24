@@ -28,7 +28,7 @@ class ItemsController < ApplicationController
     redirect_to kid_path(@list.kid), notice: 'Great Job!'
   end
 
-   def destroy
+  def destroy
     @item = Item.find(params[:id])
     
 
