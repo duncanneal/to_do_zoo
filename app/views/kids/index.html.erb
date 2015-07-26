@@ -3,7 +3,7 @@
  <% @kids.each do |kid| %>
  <div class="col-xs-6 col-sm-3 placeholder">
   <%= link_to image_tag(kid.kidimg), kid %>
-  <h4><%= kid.name %></h4>
+  <h4><%= link_to kid.name, kid, :popup => true %></h4>
 </div>
 <% end %>
 
