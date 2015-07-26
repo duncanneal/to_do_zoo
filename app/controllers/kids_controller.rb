@@ -1,4 +1,5 @@
 class KidsController < ApplicationController
+before_filter :authenticate_user!
 
   def index
     @kids = current_user.kids.all
