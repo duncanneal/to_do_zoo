@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to list_items_path(@list), notice: 'You added a new Item, Great job!' }
+        format.html { redirect_to list_items_path(@list), notice: 'You added a new Step, Great job!' }
       else
         format.html { render :new }
       end

@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :resource, :resource_name, :devise_mapping
 
+  before_filter :set_kids
+
   def resource_name
     :user
   end
@@ -15,7 +17,11 @@ class ApplicationController < ActionController::Base
 
   #This was added to overide default routing upon successful login
   def after_sign_in_path_for(resource)
-    lists_path
+    kids_path
+  end
+
+  def set_kids
+    @kids = Kid.all
   end
 
   #Commented this out bc wasn't sure it was having any effect. This was pasted in with top 2 methods when setting up login modal on home page

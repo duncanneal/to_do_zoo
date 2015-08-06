@@ -36,7 +36,7 @@ before_filter :authenticate_user!
 
     respond_to do |format|
       if @kid.save
-        format.html { redirect_to kids_path, notice: 'Your Bundle of joy was added successfully' }
+        format.html { redirect_to kids_path, notice: "Great! If you're done adding kids, try adding a Task." }
       else
         format.html { render :new }
       end
