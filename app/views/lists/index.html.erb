@@ -51,7 +51,6 @@
   <% end %> 
 </div>
 </div>
-
 <div class="table-responsive">
   <table class="table table-striped">
     <thead>
@@ -67,8 +66,6 @@
         <td><%= link_to list.name, list_items_path(list) %></td>
         <td><%= list.kid.name %></td>
         <td>
-
-
           <div class="progress">
             <div class="progress-bar progress-bar-danger" role="progressbar" 
             aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:<%= list.items.count > 0 ? ((list.items.where(:is_complete => true).count / list.items.count.to_f) * 100).to_i : 0 %>%">
@@ -82,4 +79,32 @@
 </table>
 </div>
 
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Add a Task</button>
+<button type="button" class="btn btn-primary btn-lg so-awesome" data-toggle="modal" data-target="#myModal">Add a Task</button>
+
+<ol id="add_kid_tip">
+      <li data-class="so-awesome" data-text="Next" class="custom">
+        <h2>Now Add a Task</h2>
+        <p>An example of a Task could be your kid's bedroom.</p>
+      </li>
+      <li data-button="Next">
+        <h2>Tasks</h2>
+        <p><i class="fa fa-hand-o-up fa-2x"></i> After you have added your task click on it's name.</p>
+      </li>
+    </ol>
+
+<script>
+  $(window).load(function() {
+      $("#add_kid_tip").joyride({
+        autoStart : true,
+        cookieMonster: true,
+        cookieName: 'todozoolist'
+          postStepCallback : function (index, tip) {
+          if (index == 2) {
+            $(this).joyride('set_li', false, 1);
+          }
+        },
+        modal:true,
+        expose: true
+      });
+    });
+    </script>

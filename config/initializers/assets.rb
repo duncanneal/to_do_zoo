@@ -11,3 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( cover.css )
 Rails.application.config.assets.precompile += %w( kid.css )
+Rails.application.config.assets.precompile += %w( joyride-2.1.css )

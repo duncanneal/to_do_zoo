@@ -14,3 +14,7 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require_tree .
+//= require jquery-1.10.1.js
+//= require jquery.cookie.js
+//= require jquery.joyride-2.1.js
+//= require modernizr.mq.js

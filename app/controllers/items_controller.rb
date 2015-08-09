@@ -34,7 +34,7 @@ class ItemsController < ApplicationController
 
     @item.destroy
     respond_to do |format|
-      format.html { redirect_to list_items_url(@list), notice: 'Item Removed.' }
+      format.html { redirect_to list_items_url(@list), notice: 'Step Removed.' }
     end
 
  #   if @item.destroy
