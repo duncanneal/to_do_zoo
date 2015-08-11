@@ -3,7 +3,7 @@ body {
   position: relative;
 }
 
-#add_kid_tip { display: none; }
+#add_kid_tip, #add_list_tip { display: none; }
 
 .joyRideTipContent { display: none; }
 

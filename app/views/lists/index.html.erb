@@ -79,10 +79,10 @@
 </table>
 </div>
 
-<button type="button" class="btn btn-primary btn-lg so-awesome" data-toggle="modal" data-target="#myModal">Add a Task</button>
+<button type="button" class="btn btn-primary btn-lg tasker" data-toggle="modal" data-target="#myModal">Add a Task</button>
 
-<ol id="add_kid_tip">
-      <li data-class="so-awesome" data-text="Next" class="custom">
+<ol id="add_list_tip">
+      <li data-class="tasker" data-text="Next" class="custom">
         <h2>Now Add a Task</h2>
         <p>An example of a Task could be your kid's bedroom.</p>
       </li>
@@ -94,11 +94,11 @@
 
 <script>
   $(window).load(function() {
-      $("#add_kid_tip").joyride({
+      $("#add_list_tip").joyride({
         autoStart : true,
-        cookieMonster: true,
-        cookieName: 'todozoolist'
-          postStepCallback : function (index, tip) {
+        'cookieMonster': true,
+        'cookieName': 'todozoolist',
+        postStepCallback : function (index, tip) {
           if (index == 2) {
             $(this).joyride('set_li', false, 1);
           }
